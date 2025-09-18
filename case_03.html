@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 3</title>
+    <style>
+        :root{
+            --section-width:800px;
+            --section-height:500px;
+
+            --div-width:200px;
+            --div-height:100px;
+        }
+        section{
+            width: var(--section-width);
+            height: var(--section-height);
+            border: 5px solid black;
+            overflow: hidden;
+        }
+        section>div{
+            width: var(--div-width);
+            height: var(--div-height);
+            background: gold;
+            border-radius: 15px;
+            animation-name: myanimation;
+            animation-duration: 3000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes myanimation {
+            0%{
+                margin-left: 0px;
+                margin-top: 0px;
+                transform: rotate(0deg);
+            }
+            25%{
+                margin-left: calc(var(--section-width) - var(--div-width));
+                margin-top: 0px;
+                transform: rotate(180deg);
+            }
+            50%{
+                margin-top: calc(var(--section-height) - var(--div-height)) ;
+                margin-left: calc(var(--section-width) - var(--div-width));
+                transform: rotate(360deg);
+            }
+            75%{
+                margin-top: calc(var(--section-height) - var(--div-height)) ;
+                margin-left: 0px;
+                transform: rotate(540deg);
+            }
+            100%{
+                margin-left: 0px;
+                margin-top: 0px;
+                transform: rotate(720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+</section>
+</body>
+</html>
