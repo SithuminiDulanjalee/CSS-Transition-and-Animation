@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Case 4</title>
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+
+      animation-name: myanimation;
+      animation-duration: 5000ms;
+      animation-iteration-count: infinite;
+    }
+    @keyframes myanimation {
+      from{
+        border: 5px solid red;
+      }
+      to{
+        width: 300px;
+        height: 300px;
+
+        border-radius: 50%;
+        border: 5px solid white;
+      }
+    }
+  </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
